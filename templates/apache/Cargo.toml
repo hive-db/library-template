@@ -1,0 +1,147 @@
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+#▒  Hive DB  | Library Templates | https://hivedb.com 
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+# Rust Package Manifest
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[package]
+name = "{{PROJECT_NAME}}"
+version = "0.1.0"
+
+# Project Metadata
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+rust-version = "1.82"
+edition = "2021"
+readme  = "README.md"
+license = "Apache-2.0"
+publish = false
+
+# Project Information
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+description = "{{PROJECT_DESCRIPTION}}"
+
+# links
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+homepage      = "{{HOMEPAGE_URL}}"
+repository    = "{{REPOSITORY_URL}}"
+documentation = "{{DOCS_URL}}"
+
+# Categories (5 MAX)
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+categories = [
+    "database-implementations",
+    "data-structures"
+]
+
+# Keywords (5 NAX)
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+keywords = [
+
+]
+
+# Exclude files from the package
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+exclude = [
+    ".github/",  # GitHub metadata 
+    "dev/",      # Development utilities
+]
+
+# Authors
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+authors = [
+    "James Gober <code@jamesgober.dev>",
+    "Brittany Gober <brittany@artexmail.con>",
+    "Matt Callahan <matt@hivedb.con>",
+]
+
+# Executables
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[[bin]] 
+
+
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[lib]# Libraries
+
+
+# Feature Flags
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[features] 
+default = ["async", "json"] # Default features for Hive DB
+async = ["tokio", "futures", "async-trait"]
+json = ["serde_json"]
+sync = ["parking_lot"]
+full = ["async", "json", "sync"]
+
+
+# Example Programs
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[[example]]
+
+
+
+# Project Dependencies
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[dependencies] 
+# Core dependencies (always available)
+thiserror = "2.0.17"
+serde = { version = "1.0.228", features = ["derive"] }
+
+# Async dependencies (optional via 'async' feature)
+tokio = { version = "1.48.0", features = ["full"], optional = true }
+futures = { version = "0.3.31", optional = true }
+async-trait = { version = "0.1", optional = true }
+
+# JSON support (optional via 'json' feature)
+serde_json = { version = "1.0.145", optional = true }
+
+# Sync primitives (optional via 'sync' feature)
+parking_lot = { version = "0.12.5", optional = true }
+
+# Development Dependencies
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[dev-dependencies]
+tempfile = "3.8"
+
+
+# Release Build Configuration
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+[profile.release] 
+# Maximum optimization level
+opt-level = 3
+# Link-time optimization for cross-crate inlining
+lto = "fat"
+# Single codegen unit for better optimization 
+codegen-units = 1
+# No debug info in release (smaller, faster)
+debug = false
+# Panic = abort for smaller binaries
+panic = "abort"
+# Reduce binary size
+strip = true
+# Overflow checks off for max speed
+overflow-checks = false
+
+
+[profile.dev]
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+# Faster debug builds
+opt-level = 1
+# Faster linker
+split-debuginfo = "unpacked"
+
+
+# Benchmark profile for accurate measurements
+[profile.bench]
+#☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+debug = false
+
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+# Library Template | v.{{TEMPLATE_VERSION}} | {{CURRENT_DATE}}
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░
+# Copyright (c) {{YEAR}} Hive DB Inc. All rights reserved
+#▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░

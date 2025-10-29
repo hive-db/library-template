@@ -1,0 +1,55 @@
+name: Hive DB Library Template
+description: Choose between Apache 2.0 or Proprietary licensed Rust library templates
+
+prompts:
+  - name: project_name
+    description: "Library name (will be used as crate name)"
+    type: input
+    default: "my-hive-library"
+
+  - name: template_type
+    description: "License type for your library"
+    type: dropdown
+    options:
+      - label: "Apache 2.0 License"
+        value: "apache"
+      - label: "Proprietary License"
+        value: "proprietary"
+    default: "apache"
+
+  - name: library_description
+    description: "Brief description of your library"
+    type: input
+    default: "A Rust library for..."
+
+  - name: authors
+    description: "Author(s) for the library"
+    type: dropdown
+    options:
+      # Auto-populated from template-config.toml [authors] section
+      - label: "Hive DB Inc."
+        value: "corporate"
+      - label: "Hive DB Team <dev@hivedb.com>"
+        value: "team"
+      - label: "James Gober <code@jamesgober.dev>"
+        value: "james"
+      - label: "Brittany Gober <brittany@artexmail.com>"
+        value: "britt"
+      - label: "Matt Callahan <matt@hivedb.com>"
+        value: "matt"
+      - label: "Custom (specify in description)"
+        value: "custom"
+    default: "james"
+
+  - name: include_docs
+    description: "Include documentation template"
+    type: checkbox
+    default: true
+
+  - name: rust_edition
+    description: "Rust edition"
+    type: dropdown
+    options:
+      - "2021"
+      - "2018"
+    default: "2021"

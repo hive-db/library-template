@@ -6,7 +6,8 @@
     <br><sub><sup>Library Template</sup></sub>
 </h1>
 <!-- ⬢⬢⬢⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬢⬢⬢ -->
-{CONTENT}
+
+Content.
 
 <br>
 
@@ -26,13 +27,11 @@
 <hr>
 <h2>⚖️ License</h2>
 <p>
-Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. All trademarks, service marks, trade names, logos, and product names are the property of their respective owners. You may obtain a copy of the License at: <a href="http://www.apache.org/licenses/LICENSE-2.0" title="Apache License 2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+This software and associated documentation files (the "<b>Software</b>") are proprietary and confidential to <b>Hive DB Inc</b>. The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. No part of the Software may be reproduced, distributed, transmitted, transcribed, stored in a retrieval system, or translated into any human or computer language, in any form or by any means, electronic, mechanical, magnetic, optical, chemical, manual, or otherwise, without the express written permission of Hive DB Inc.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+The <b>Software</b> is licensed, not sold. Hive DB Inc. retains all right, title, and interest in and to the Software, including all intellectual property rights therein. Any unauthorized use, reproduction, or distribution of the Software, or any portion thereof, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.
+
+This proprietary license does not grant any rights to use Hive DB Inc. trademarks or trade names, nor does it grant any rights under patents that may be infringed by the Software or the use thereof.
 </p>
 <p>See the <a href="./LICENSE" title="Software License file">LICENSE</a> file included with this project for more information.</p>
 </div>

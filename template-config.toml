@@ -1,0 +1,140 @@
+# Hive DB Library Template Configuration
+# This file defines the available templates and their configuration variables
+
+[metadata]
+version = "0.1.0"
+description = "Hive DB Rust library templates"
+
+# Template definitions
+[templates.apache]
+name = "Apache Licensed Library"
+description = "Standard Apache 2.0 licensed Rust library template"
+license_type = "Apache-2.0"
+license_file = "LICENSE"
+directory = "templates/apache"
+
+[templates.proprietary]
+name = "Proprietary Library"
+description = "Proprietary licensed Rust library template with development notes"
+license_type = "Proprietary"
+license_file = "LICENSE"
+directory = "templates/proprietary"
+
+# Global template variables
+[variables]
+# Company/Organization
+copyright_holder = "Hive DB Inc."
+author = "Hive DB Inc."
+author_email = "dev@hivedb.com"
+
+# Centralized authors list - UPDATE THIS ONE LOCATION
+[authors]
+# Corporate/Team entries
+corporate = { name = "Hive DB Inc.", email = "", display = "Hive DB Inc." }
+team = { name = "Hive DB Team", email = "dev@hivedb.com", display = "Hive DB Team <dev@hivedb.com>" }
+
+# Individual contributors
+james = { name = "James Gober",    email = "code@jamesgober.dev", display = "James Gober <code@jamesgober.dev>" }
+britt = { name = "Brittany Gober", email = "brittany@artexmail.com", display = "Brittany Gober <brittany@artexmail.com>" }
+matt  = { name = "Matt Callahan",  email = "matt@artexmail.com", display = "Matt Callahan <matt@artexmail.com>" }
+
+# Default and special entries
+default = "corporate"
+custom = { name = "Custom Author", email = "", display = "{{CUSTOM_AUTHOR}}" }
+
+# Dates
+year = "{{YEAR}}"
+current_date = "{{CURRENT_DATE}}"
+
+# Repository settings
+repository_base = "https://github.com/hive-db/"
+repository_owner = "hive-db"
+
+# Rust/Cargo specific
+rust_edition = "2021"
+msrv = "1.70.0"  # Minimum Supported Rust Version
+
+# Documentation
+docs_url_base = "https://docs.rs/"
+
+# Placeholders used in template files
+[placeholders]
+project_name = "{{PROJECT_NAME}}"
+project_description = "{{PROJECT_DESCRIPTION}}"
+repository_url = "{{REPOSITORY_URL}}"
+docs_url = "{{DOCS_URL}}"
+homepage_url = "{{HOMEPAGE_URL}}"
+version = "{{VERSION}}"
+template_version = "{{TEMPLATE_VERSION}}"
+copyright_holder = "{{COPYRIGHT_HOLDER}}"
+author = "{{AUTHOR}}"
+author_email = "{{AUTHOR_EMAIL}}"
+year = "{{YEAR}}"
+current_date = "{{CURRENT_DATE}}"
+rust_edition = "{{RUST_EDITION}}"
+msrv = "{{MSRV}}"
+
+# Template-specific configurations
+[apache]
+# Additional Apache-specific settings
+spdx_license_id = "Apache-2.0"
+license_url = "http://www.apache.org/licenses/LICENSE-2.0"
+
+[proprietary]
+# Additional proprietary-specific settings
+license_grant_file = "dev/license/LICENSE-PROP-GRANT"
+license_strict_file = "dev/license/LICENSE-PROP-STRICT"
+development_notes = "dev/NOTES.md"
+
+# File patterns to process (replace placeholders)
+[processing]
+# Files that should have placeholders replaced
+process_files = [
+    "Cargo.toml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "src/lib.rs",
+    "dev/NOTES.md",
+    "dev/license/LICENSE-PROP-GRANT",
+    "dev/license/LICENSE-PROP-STRICT"
+]
+
+# Files to copy as-is (no placeholder replacement)
+copy_files = [
+    ".editorconfig",
+    ".gitattributes", 
+    ".gitignore"
+]
+
+# Example usage instructions
+[usage]
+description = """
+To use this template system:
+1. Choose a template (apache or proprietary)
+2. Select an author from the predefined list
+3. Set PROJECT_NAME and PROJECT_DESCRIPTION
+4. Run the template generator
+5. All placeholders will be replaced with actual values
+
+AUTHOR MANAGEMENT:
+- Update the [authors] section in this file to add/remove team members
+- The GitHub template chooser will automatically reflect these changes
+- Use the 'key' as the internal reference, 'display' as the user-facing text
+"""
+
+example_command = "cargo generate --name my-library --template apache"
+
+# Author management instructions
+[author_management]
+instructions = """
+TO ADD A NEW AUTHOR:
+1. Add entry to [authors] section above:
+   new_person = { name = "Person Name", email = "person@hivedb.dev", display = "Person Name <person@hivedb.dev>" }
+
+2. Update .github/template-chooser.yml to include the new option:
+   - label: "Person Name <person@hivedb.dev>"
+     value: "new_person"
+
+3. The template generator will automatically use the new author option
+"""

@@ -6,7 +6,8 @@
     <br><sub><sup>Library Template</sup></sub>
 </h1>
 <!-- ⬢⬢⬢⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬢⬢⬢ -->
-{CONTENT}
+
+Content.
 
 <br>
 
